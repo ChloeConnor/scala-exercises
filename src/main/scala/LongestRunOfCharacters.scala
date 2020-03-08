@@ -1,5 +1,13 @@
 object LongestRunOfCharacters {
 
+  /**
+   * For a given string of characters find the longest
+   * sequence of non repeating characters
+   *
+   * e.g string "abbac" should return 3 because "bac" is
+   * the longest string of different characters
+   */
+
   def findLongestRunOfUniqueCharacters(s: String): Int = {
     val listOfChars = s.toList
     val listToCompare = listOfChars.drop(1) ++ "+"
