@@ -1,12 +1,11 @@
 object AngleBrackets {
 
   /**
-   * For a given string of angle brackets append to the start
-   * and end to close all pairs
-   *
-   * e.g for string <>< we would need to add > to the end
-   */
-
+    * For a given string of angle brackets append to the start
+    * and end to close all pairs
+    *
+    * e.g for string <>< we would need to add > to the end
+    */
   def closeAllAngleBrackets(angles: String): String = {
     val brackets = angles.toList.map(a => a.toString)
 

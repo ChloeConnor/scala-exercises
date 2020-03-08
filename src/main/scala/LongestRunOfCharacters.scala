@@ -1,12 +1,12 @@
 object LongestRunOfCharacters {
 
   /**
-   * For a given string of characters find the longest
-   * sequence of non repeating characters
-   *
-   * e.g string "abbac" should return 3 because "bac" is
-   * the longest string of different characters
-   */
+    * For a given string of characters find the longest
+    * sequence of non repeating characters
+    *
+    * e.g string "abbac" should return 3 because "bac" is
+    * the longest string of different characters
+    */
 
   def findLongestRunOfUniqueCharacters(s: String): Int = {
     val listOfChars = s.toList
@@ -20,7 +20,6 @@ object LongestRunOfCharacters {
       .filter(_ >= 0)
       .appended(listOfChars.length)
 
-//    println(indices)
     if (indices.length == 1) return listOfChars.length
 
     val newIndices = indices.appended(indices.length)
@@ -29,18 +28,11 @@ object LongestRunOfCharacters {
         newIndices(a._2 + 1) - a._1 - 1
       })
 
-//    println(a)
-
     if (a.max == 1) 0
     else a.max
   }
 
   def main(args: Array[String]): Unit = {
-
-    println(findLongestRunOfUniqueCharacters("nndfddf"))
-    println(findLongestRunOfUniqueCharacters("absjfye"))
-    println(findLongestRunOfUniqueCharacters("abbbbbao"))
-    println(findLongestRunOfUniqueCharacters("aaaaaaa"))
 
     assert(findLongestRunOfUniqueCharacters("nndfddf") == 3)
     assert(findLongestRunOfUniqueCharacters("absjfye") == 7)
