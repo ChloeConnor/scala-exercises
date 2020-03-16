@@ -1,5 +1,15 @@
 package com.chloe.scala
 
+/**
+ * For a given string of As and Bs find the number of
+ * characters to be removed so that no adjacent character
+ * is the same
+ *
+ * e.g string "ABAA" would return 1 as you'd need to remove
+ * one A to leave the string "ABA", with no adjacent characters
+ * the same
+ */
+
 object RemoveAdjacentCharacters {
 
   def anyOtherThanAOrB(string: String): Boolean = {
@@ -30,5 +40,8 @@ object RemoveAdjacentCharacters {
 
   }
 
-  def main(args: Array[String]): Unit = {}
+  def main(args: Array[String]): Unit = {
+
+    println(removeAdjacentCharacters("ABAA"))
+  }
 }
