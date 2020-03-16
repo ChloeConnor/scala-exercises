@@ -1,3 +1,5 @@
+package com.chloe.scala
+
 object LongestRunOfCharacters {
 
   /**
