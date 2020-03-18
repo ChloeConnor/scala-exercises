@@ -25,4 +25,14 @@ class TestListFromList extends AnyFlatSpec {
     assert(output == expectedOutput)
   }
 
+  it should "return the number of elements given any length list" in {
+    val inputList = List("apple", "pear", "lemon", "orange")
+    val inputNumber =  6
+    val expectedOutput = List("apple", "pear", "lemon", "orange", "apple", "pear")
+
+    val output = createList(inputList, inputNumber)
+
+    assert(output == expectedOutput)
+  }
+
 }

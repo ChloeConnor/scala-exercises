@@ -24,7 +24,7 @@ object ListFromList {
 
   def createList(list: List[String], number: Int): List[String] = {
 
-    if (list.size <= number) returnNumberOfElements(list, number)
+    if (number<= list.size) returnNumberOfElements(list, number)
     else returnNumberOfElementsWhenLarger(list, number)
 
   }
